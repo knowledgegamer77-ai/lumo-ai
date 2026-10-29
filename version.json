@@ -1,15 +1,12 @@
 {
   "version": "2.2.0",
-  "name": "Lumo AI v2.2.0 — Multi-Device Real-Time Sync & Meezan Bank Edition",
+  "name": "Lumo AI v2.2.0 — Pro Client Edition",
   "release_date": "2026-10-29",
   "changelog": [
-    "Seamless 1-Click in-app ZIP update extraction and restart.",
-    "Real-time multi-device cloud telemetry with automated LAN IP auto-discovery.",
-    "Master Cloud Admin email dashboard for leads & client registrations.",
-    "Anti-Self-Redemption security for referral codes.",
-    "Official GitHub repository link integration for 1-click sharing."
-  ],
-  "download_url": "https://github.com/knowledgegamer77-ai/lumo-ai/releases/latest/download/Lumo_v2.0_Pro_Client_Release.zip",
-  "mandatory": false,
-  "min_supported_version": "2.0.0"
+    "⚡ Critical Bug Fixes & 100% Instant Smooth Performance (Zero Lag).",
+    "🚀 High-Precision B2B Lead Engine & Live Deliverability Enhancements.",
+    "💬 1-Click WhatsApp Direct Lead Outreach & Link Sharing.",
+    "💳 Meezan Bank, JazzCash & Raast Instant QR Payment Integration.",
+    "🛡️ Enhanced Security & Safe Referral Rewards Protection."
+  ]
 }
