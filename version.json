@@ -1,0 +1,15 @@
+{
+  "version": "2.1.0",
+  "name": "Lumo AI v2.1.0 — Meezan Bank & Real-Time Sync Edition",
+  "release_date": "2026-10-29",
+  "changelog": [
+    "Official Meezan Bank QR Scanner and Account Settlement (SadaPay/NayaPay replaced).",
+    "Real-time cross-device cloud telemetry and live login audit dashboard.",
+    "1-Click Remote Kill Switch in Master Cloud Admin Console.",
+    "Fixed HTML rendering and code block display issues across pricing and sidebar.",
+    "Streamlined automated 1-click in-app update engine."
+  ],
+  "download_url": "https://github.com/knowledgegamer77-ai/lumo-ai/releases/download/v2.1.0/Lumo_v2.0_Pro_Client_Release.zip",
+  "mandatory": false,
+  "min_supported_version": "2.0.0"
+}
