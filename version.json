@@ -1,15 +1,15 @@
 {
   "version": "2.2.0",
   "name": "Lumo AI v2.2.0 — Pro Client Edition",
-  "release_date": "2026-10-29",
+  "release_date": "2026-11-06",
   "changelog": [
-    "⚡ Critical Bug Fixes & 100% Instant Smooth Performance (Zero Lag).",
-    "🚀 High-Precision B2B Lead Engine & Live Deliverability Enhancements.",
-    "💬 1-Click WhatsApp Direct Lead Outreach & Link Sharing.",
-    "💳 Meezan Bank, JazzCash & Raast Instant QR Payment Integration.",
-    "🛡️ Enhanced Security & Safe Referral Rewards Protection."
+    "⚡ Full Country Mapping covering 200 catalog countries & strict ISO validation.",
+    "🚀 Obfuscated email multi-dot extraction & strict contact-block scoping.",
+    "💬 Cross-country phone normalization with WhatsApp mobile-only gating.",
+    "🛡️ Zero developer branding & Outreach Profile enforcement.",
+    "📦 Standalone client executable packaging with bundled Python 3.11 runtime."
   ],
-  "download_url": "https://github.com/knowledgegamer77-ai/lumo-ai/releases/latest/download/Lumo_v2.0_Pro_Client_Release.zip",
+  "download_url": "https://github.com/knowledgegamer77-ai/lumo-ai/releases/latest/download/Lumo_v2.2.0_Pro_Client_Release.zip",
   "mandatory": false,
   "min_supported_version": "2.0.0"
 }
