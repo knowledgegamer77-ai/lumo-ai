@@ -72,7 +72,7 @@ init_db()
 
 app = FastAPI(
     title="Lumo AI Central Cloud Telemetry Server",
-    version="2.2.0",
+    version="2.3.0",
 )
 
 app.add_middleware(
@@ -110,7 +110,7 @@ def health_check():
     return {
         "status": "online",
         "service": "Lumo AI Central Cloud Telemetry & Licensing Backend",
-        "version": "2.2.0",
+        "version": "2.3.0",
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     }
 
@@ -119,17 +119,17 @@ def health_check():
 @app.get("/api/v1/version")
 def get_latest_version():
     return {
-        "version": "2.2.0",
-        "name": "Lumo AI v2.2.0 — Pro Client Edition",
-        "release_date": "2026-11-06",
+        "version": "2.3.0",
+        "name": "Lumo AI v2.3.0 — Pro Desktop Edition",
+        "release_date": "2026-11-26",
         "changelog": [
-            "⚡ Full Country Mapping covering 200 catalog countries & strict ISO validation.",
-            "🚀 Obfuscated email multi-dot extraction & strict contact-block scoping.",
-            "💬 Cross-country phone normalization with WhatsApp mobile-only gating.",
-            "🛡️ Zero developer branding & Outreach Profile enforcement.",
-            "📦 Standalone client executable packaging with bundled Python 3.11 runtime."
+            "Graphical Windows Setup Installer (Inno Setup) with standard-user installation and automatic license/database preservation on upgrades.",
+            "SHA-256 verified silent in-app auto-updater with zero console windows (CREATE_NO_WINDOW).",
+            "Clean UI across all screens, improved WhatsApp mobile validation, and full 200-country mapping.",
+            "Strict live-discovery enforcement with zero curated-seed fallbacks and live MX/SMTP deliverability verification."
         ],
-        "download_url": "https://github.com/knowledgegamer77-ai/lumo-ai/releases/latest/download/Lumo_v2.2.0_Pro_Client_Release.zip",
+        "download_url": "https://github.com/knowledgegamer77-ai/lumo-ai/releases/latest/download/Lumo_AI_Setup_2.3.0.exe",
+        "sha256": "c5e2dea66b83017c5af405be37a0c6777c1f342116e4cef5e2a4b42678406e6a",
         "mandatory": False,
         "min_supported_version": "2.0.0",
     }
