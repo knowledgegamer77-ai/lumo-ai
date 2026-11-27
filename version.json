@@ -1,15 +1,15 @@
 {
-  "version": "2.3.0",
-  "name": "Lumo AI v2.3.0 — Pro Desktop Edition",
-  "release_date": "2026-11-26",
+  "version": "2.3.1",
+  "name": "Lumo AI v2.3.1 - Pro Desktop Edition",
+  "release_date": "2026-11-27",
   "changelog": [
-    "Graphical Windows Setup Installer (Inno Setup) with standard-user installation and automatic license/database preservation on upgrades.",
-    "SHA-256 verified silent in-app auto-updater with zero console windows (CREATE_NO_WINDOW).",
-    "Clean UI across all screens, improved WhatsApp mobile validation, and full 200-country mapping.",
-    "Strict live-discovery enforcement with zero curated-seed fallbacks and live MX/SMTP deliverability verification."
+    "Added automated local PKR, wallet & card checkout supporting Safepay and PayFast Pakistan.",
+    "Synced desktop upgrade UI directly with cloud Render PostgreSQL + Ed25519 auto-licensing backend.",
+    "Removed unnecessary local server port probing when using the cloud gateway and raised checkout timeouts for smooth cold starts.",
+    "Includes graphical Windows installer with standard-user setup and SHA-256 verified silent auto-updates."
   ],
-  "download_url": "https://github.com/knowledgegamer77-ai/lumo-ai/releases/latest/download/Lumo_AI_Setup_2.3.0.exe",
+  "download_url": "https://github.com/knowledgegamer77-ai/lumo-ai/releases/latest/download/Lumo_AI_Setup_2.3.1.exe",
   "mandatory": false,
   "min_supported_version": "2.0.0",
-  "sha256": "c5e2dea66b83017c5af405be37a0c6777c1f342116e4cef5e2a4b42678406e6a"
+  "sha256": "572a61254f8de3353553ff6ef1fb273aa6839f306beccdca814586a0a4eb85df"
 }

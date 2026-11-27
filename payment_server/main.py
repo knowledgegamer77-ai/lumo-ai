@@ -806,22 +806,22 @@ async def admin_unblock_device_api(payload: BlockDeviceRequest, request: Request
 async def get_latest_version_manifest():
     """Returns the latest official release manifest for client in-app auto-updating."""
     return {
-        "version": os.getenv("LUMO_LATEST_VERSION", "2.3.0"),
-        "name": os.getenv("LUMO_RELEASE_NAME", "Lumo AI v2.3.0 - Pro Desktop Edition"),
-        "release_date": os.getenv("LUMO_RELEASE_DATE", "2026-11-26"),
+        "version": os.getenv("LUMO_LATEST_VERSION", "2.3.1"),
+        "name": os.getenv("LUMO_RELEASE_NAME", "Lumo AI v2.3.1 - Pro Desktop Edition"),
+        "release_date": os.getenv("LUMO_RELEASE_DATE", "2026-11-27"),
         "changelog": [
-            "Graphical Windows Setup Installer (Inno Setup) with standard-user installation and automatic license/database preservation on upgrades.",
-            "SHA-256 verified silent in-app auto-updater with zero console windows (CREATE_NO_WINDOW).",
-            "Clean UI across all screens, improved WhatsApp mobile validation, and full 200-country mapping.",
-            "Automated local PKR & Card checkout supporting Safepay and PayFast Pakistan.",
+            "Automated local PKR, wallet & card checkout supporting Safepay and PayFast Pakistan.",
+            "Cloud PostgreSQL + Ed25519 instant auto-activation integrated cleanly with desktop app.",
+            "Eliminated local port probing against remote cloud gateways and improved cold-start reliability.",
+            "Graphical Windows Setup Installer with SHA-256 verified silent in-app auto-updater.",
         ],
         "download_url": os.getenv(
             "LUMO_DOWNLOAD_URL",
-            "https://github.com/knowledgegamer77-ai/lumo-ai/releases/latest/download/Lumo_AI_Setup_2.3.0.exe",
+            "https://github.com/knowledgegamer77-ai/lumo-ai/releases/latest/download/Lumo_AI_Setup_2.3.1.exe",
         ),
         "sha256": os.getenv(
             "LUMO_INSTALLER_SHA256",
-            "c5e2dea66b83017c5af405be37a0c6777c1f342116e4cef5e2a4b42678406e6a",
+            "572a61254f8de3353553ff6ef1fb273aa6839f306beccdca814586a0a4eb85df",
         ),
         "mandatory": False,
         "min_supported_version": "2.0.0",
