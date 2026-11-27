@@ -195,19 +195,23 @@ class SafepayPaymentProvider(BasePaymentProvider):
         message = timestamp_header.encode("utf-8") + b"." + raw_body
         computed_hash = hmac.new(signing_key, msg=message, digestmod=hashlib.sha256).hexdigest()
 
-        # Also support servers where dashboard secret should be hashed directly as UTF-8
+        # Also support servers where shared secret is UTF-8 or raw 64-char hex bytes
         alt_hash = hmac.new(secret.encode("utf-8"), msg=message, digestmod=hashlib.sha256).hexdigest()
+        candidates = [
+            f"sha256={computed_hash}",
+            computed_hash,
+            f"sha256={alt_hash}",
+            alt_hash,
+        ]
+        if len(secret) == 64:
+            try:
+                hex_hash = hmac.new(bytes.fromhex(secret), msg=message, digestmod=hashlib.sha256).hexdigest()
+                candidates.extend([f"sha256={hex_hash}", hex_hash])
+            except ValueError:
+                pass
 
         clean_sig_header = signature_header.strip()
-        is_valid = any(
-            hmac.compare_digest(candidate, clean_sig_header)
-            for candidate in (
-                f"sha256={computed_hash}",
-                computed_hash,
-                f"sha256={alt_hash}",
-                alt_hash,
-            )
-        )
+        is_valid = any(hmac.compare_digest(candidate, clean_sig_header) for candidate in candidates)
 
         if not is_valid:
             logger.warning("Safepay webhook signature mismatch.")
@@ -266,11 +270,16 @@ class SafepayPaymentProvider(BasePaymentProvider):
             "authorization.succeeded",
             "tracker.completed",
             "payment.captured",
+            "subscription.payment.succeeded",
         }
         refund_event_types = {
             "charge.refunded",
+            "payment.refunded",
             "refund.created",
+            "refund:created",
             "payment.reversed",
+            "void.succeeded",
+            "authorization.reversed",
         }
 
         state = str(data.get("state", "")).upper().strip()
